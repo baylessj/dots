@@ -179,3 +179,6 @@ jack_stop() {
 	pulseaudio --start
 }
 alias disableTouch="xinput disable $(xinput list --id-only 'ELAN Touchscreen') "
+export PATH="$PATH:/home/bayle/Documents/flutter_linux_v1.5.4-hotfix.2-stable/flutter/bin"
+export PATH="$PATH:/home/bayle/Documents/android-studio-ide-183.5522156-linux/android-studio/jre/jre/bin"
+alias lsh="ls -ld .?*"
