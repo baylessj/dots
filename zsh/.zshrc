@@ -135,10 +135,10 @@ export PATH="$PATH:/home/bayle/.local/bin"
 alias cd_vex="cd /mnt/c/Users/Jonathan/vexRepos"
 alias undo_arc="git reset --hard origin/HEAD"
 build_okapi() {
-mkdir cmake-build-debug
-cd cmake-build-debug
-cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" ..
-cmake --build . --target OkapiLibV5 -- -j 2
+	mkdir cmake-build-debug
+	cd cmake-build-debug
+	cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" ..
+	cmake --build . --target OkapiLibV5 -- -j 2
 }
 export EDITOR=vim
 alias s="git status"
@@ -178,8 +178,7 @@ jack_stop() {
 	jack_control exit
 	pulseaudio --start
 }
-alias disableTouch="xinput disable $(xinput list --id-only 'ELAN Touchscreen') "
-export PATH="$PATH:/home/bayle/Documents/flutter_linux_v1.5.4-hotfix.2-stable/flutter/bin"
+export PATH="$PATH:/home/bayle/flutter/bin"
 export PATH="$PATH:/home/bayle/Documents/android-studio-ide-183.5522156-linux/android-studio/jre/jre/bin"
 alias lsh="ls -ld .?*"
 alias flutter-keygen="keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 9999 -alias autodo"
