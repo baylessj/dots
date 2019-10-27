@@ -182,3 +182,12 @@ export PATH="$PATH:/home/bayle/flutter/bin"
 export PATH="$PATH:/home/bayle/Documents/android-studio-ide-183.5522156-linux/android-studio/jre/jre/bin"
 alias lsh="ls -ld .?*"
 alias flutter-keygen="keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 9999 -alias autodo"
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+export PATH=$PATH:/home/bayle/gcc-arm-none-eabi-8-2019-q3-update/bin/
+export JAVA_HOME=/home/bayle/Documents/android-studio/jre/
+
+# added by travis gem
+[ -f /home/bayle/.travis/travis.sh ] && source /home/bayle/.travis/travis.sh
+export PATH=$PATH:/home/bayle/Documents/onefetch_linux_x86-64 
