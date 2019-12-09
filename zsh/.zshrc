@@ -192,3 +192,5 @@ export JAVA_HOME=/home/bayle/Documents/android-studio/jre/
 [ -f /home/bayle/.travis/travis.sh ] && source /home/bayle/.travis/travis.sh
 export PATH=$PATH:/home/bayle/Documents/onefetch_linux_x86-64
 export PATH=$PATH:/home/bayle/Documents/android-studio/jre/bin/
+export PATH=$PATH:$HOME/flutter/.pub-cache/bin
+alias flutter_codecov="flutter test --coverage && genhtml coverage/lcov.info --output=coverage"
