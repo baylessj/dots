@@ -193,4 +193,8 @@ export JAVA_HOME=/home/bayle/Documents/android-studio/jre/
 export PATH=$PATH:/home/bayle/Documents/onefetch_linux_x86-64
 export PATH=$PATH:/home/bayle/Documents/android-studio/jre/bin/
 export PATH=$PATH:$HOME/flutter/.pub-cache/bin
-alias flutter_codecov="flutter test --coverage && genhtml coverage/lcov.info --output=coverage"
+alias flutter_codecov="flutter test -j 4 --coverage && genhtml coverage/lcov.info --output=coverage"
+export PATH=~/.npm-global/bin:$PATH
+export PATH="$PATH:/usr/lib/dart/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+alias flutter_drive="flutter drive --target=test_driver/app.dart"
