@@ -198,3 +198,8 @@ export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:/usr/lib/dart/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 alias flutter_drive="flutter drive --target=test_driver/app.dart"
+
+export PATH="$PATH:/home/bayle/.cargo/bin"
+
+alias localize="flutter pub run json_intl -d lib/generated/localization.dart"
+alias extract_pubspec="flutter pub run pubspec_extract -d lib/generated/pubspec.dart"
