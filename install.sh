@@ -39,6 +39,9 @@ git clone https://github.com/joshdick/onedark.vim.git "$HOME/.vim/pack/foo/opt/o
 git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 git clone https://github.com/majutsushi/tagbar.git ~/.vim/pack/plugins/start/tagbar
+mkdir -p ~/.vim/pack/default/start
+git clone https://github.com/sheerun/vim-polyglot ~/.vim/pack/default/start/vim-polyglot
+git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwiki
 
 # First set of entered git credentials will be saved
 git config --global credential.helper store
