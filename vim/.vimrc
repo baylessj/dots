@@ -1,3 +1,4 @@
+packadd! onedark.vim
 colo onedark
 set background=dark
 
@@ -55,18 +56,3 @@ set ts=3 sw=3 et
 
 highlight ColorColumn ctermbg=239
 set colorcolumn=80
-
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_config_file='.syntastic_cpp_config'
-" let g:syntastic_cpp_check_header=1
-let g:syntastic_cpp_remove_include_errors=1
-let g:syntastic_c_include_dirs=['.\embOS','.\WallControl\726x_Hardware','.\Application','.\Application\sys_ctrl','.\BleTask','.\DataDictionary\Generated','./Drivers','Drivers\sdcard','GUI','GUI\altia_renesas','Middleware','Middleware\encryption','Middleware\encryption\mbedtls','Standard','WiFi','Clarinox\System\BSP\Common','Clarinox\System\ClarinoxBlue\API','Clarinox\System\CommonAPI']
-let g:syntastic_c_compiler_options='-D BING'

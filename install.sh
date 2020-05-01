@@ -32,3 +32,13 @@ chsh -s $(which zsh)
 # move .rc files
 cp ./zsh/.zshrc $HOME/.zshrc
 cp ./vim/.vimrc $HOME/.vimrc
+
+# Vim Packages
+# Onedark theme
+git clone https://github.com/joshdick/onedark.vim.git "$HOME/.vim/pack/foo/opt/onedark.vim"
+git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
+git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+git clone https://github.com/majutsushi/tagbar.git ~/.vim/pack/plugins/start/tagbar
+
+# First set of entered git credentials will be saved
+git config --global credential.helper store
