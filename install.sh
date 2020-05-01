@@ -9,9 +9,9 @@ sudo apt update
 sudo apt install brave-browser
 
 # steam
-curl -O https://steamcdn-a.akamaihd.net/client/installer/steam.deb
-sudo dpkg -i steam_latest.deb
+# curl -O https://steamcdn-a.akamaihd.net/client/installer/steam.deb
+# sudo dpkg -i steam.deb
 
 # vscode
-curl -O https://go.microsoft.com/fwlink/?LinkID=760868
-sudo dpkg -i $(ls code_*.deb | head -n1) # find the latest vscode download
+curl -o vscode.deb -L "https://go.microsoft.com/fwlink/?LinkID=760868"
+sudo dpkg -i vscode.deb 
