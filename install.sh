@@ -45,3 +45,13 @@ git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwi
 
 # First set of entered git credentials will be saved
 git config --global credential.helper store
+
+# flutter
+git clone https://github.com/flutter/flutter.git ~/flutter -b dev
+# Android Studio
+# Need to download first from website?
+initAndroidStudio() {
+   tar xf ~/Downloads/android-studio.tar.gz
+   cp -r ~/Downloads/android-studio ~
+   yes | ~/Android/Sdk/tools/bin/sdkmanager --licenses
+}
