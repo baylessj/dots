@@ -1,7 +1,7 @@
 #! /usr/bin/env zsh
 
 # apt packages to install
-sudo apt install -y gimp git nodejs python3-pip sphinx-common vim virtualbox zip zsh
+sudo apt install -y gimp git nodejs python3-pip sphinx-common vim virtualbox zip zsh lcov
 
 # install brave
 sudo apt install apt-transport-https curl
