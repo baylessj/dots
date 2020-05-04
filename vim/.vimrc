@@ -35,7 +35,7 @@ let mapleader = ","
 map <C-n> :NERDTreeToggle<CR>
 
 " Tagbar plugin
-nmap <leader>b :TagbarToggle<CR> 
+nmap <C-t> :TagbarToggle<CR> 
 
 " folding
 set foldmethod=indent
@@ -56,3 +56,15 @@ set ts=3 sw=3 et
 
 highlight ColorColumn ctermbg=239
 set colorcolumn=80
+
+let g:tagbar_type_vimwiki = {
+          \   'ctagstype':'vimwiki'
+          \ , 'kinds':['h:header']
+          \ , 'sro':'&&&'
+          \ , 'kind2scope':{'h':'header'}
+          \ , 'sort':0
+          \ , 'ctagsbin':'~/.vim/pack/vwtags.py'
+          \ , 'ctagsargs': 'default'
+          \ }
+
+set scrolloff=10 " Make sure that 10 lines above and below the cursor are shown
