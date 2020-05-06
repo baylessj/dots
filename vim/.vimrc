@@ -23,9 +23,12 @@ nnoremap k gk " scroll by screen lines rather than file lines
 set number
 set relativenumber
 
+set nobackup
+set nowritebackup
 set noswapfile
 set showcmd
 set incsearch
+set ttyfast " speeds up navigation
 
 " Backspace over anything
 set backspace=indent,eol,start
