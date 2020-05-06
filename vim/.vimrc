@@ -14,6 +14,9 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
+set ignorecase
+set smartcase " putting a capital letter in a search turns on case-sensitive search
+
 set number
 set relativenumber
 
