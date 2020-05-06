@@ -43,6 +43,7 @@ mkdir -p ~/.vim/pack/default/start
 git clone https://github.com/sheerun/vim-polyglot ~/.vim/pack/default/start/vim-polyglot
 git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwiki
 git clone https://tpope.io/vim/commentary.git ~/.vim/pack/plugins/start/commentary
+git clone https://tpope.io/vim/fugitive.git ~/.vim/pack/plugins/start/fugitive
 
 # First set of entered git credentials will be saved
 git config --global credential.helper store
