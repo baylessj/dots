@@ -23,6 +23,10 @@ nnoremap k gk " scroll by screen lines rather than file lines
 set number
 set relativenumber
 
+set noswapfile
+set showcmd
+set incsearch
+
 " Backspace over anything
 set backspace=indent,eol,start
 
