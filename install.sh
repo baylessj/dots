@@ -1,7 +1,7 @@
 #! /usr/bin/env zsh
 
 # apt packages to install
-sudo apt install -y gimp git nodejs python3-pip sphinx-common vim virtualbox zip zsh lcov ctags
+sudo apt install -y gimp git nodejs python3-pip sphinx-common vim virtualbox zip zsh lcov ctags ruby-full
 
 # install brave
 sudo apt install apt-transport-https curl
@@ -55,3 +55,7 @@ initAndroidStudio() {
    cp -r ~/Downloads/android-studio ~
    yes | ~/Android/Sdk/tools/bin/sdkmanager --licenses
 }
+
+
+# Set up Jekyll
+gem install bundler jekyll
