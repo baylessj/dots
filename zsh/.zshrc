@@ -203,3 +203,4 @@ export PATH="$PATH:/home/bayle/.cargo/bin"
 
 alias localize="flutter pub run json_intl -d lib/generated/localization.dart"
 alias extract_pubspec="flutter pub run pubspec_extract -d lib/generated/pubspec.dart"
+alias venv_start="source ./venv/bin/activate"
