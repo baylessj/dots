@@ -14,28 +14,15 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
-set ignorecase
-set smartcase " putting a capital letter in a search turns on case-sensitive search
-
-nnoremap j gj
-nnoremap k gk " scroll by screen lines rather than file lines
-
 set number
 set relativenumber
-
-set nobackup
-set nowritebackup
-set noswapfile
-set showcmd
-set incsearch
-set ttyfast " speeds up navigation
 
 " Backspace over anything
 set backspace=indent,eol,start
 
 " stop getting weird errors from hitting 'Q' all the time
-nnoremap Q q
-nnoremap :W :w
+command! Q :q
+command! W :w
 
 " Stop the bell sound/flash
 set noerrorbells visualbell t_vb=
