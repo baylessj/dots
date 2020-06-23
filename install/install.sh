@@ -1,7 +1,8 @@
 #! /usr/bin/env zsh
 
 # apt packages to install
-sudo apt install -y gimp git nodejs python3-pip sphinx-common vim virtualbox zip zsh lcov ctags ruby-full
+# alacarte -- a nice GUI for creating desktop entries for app images and things
+sudo apt install -y gimp git nodejs python3-pip sphinx-common vim virtualbox zip zsh lcov ctags ruby-full alacarte
 
 # install brave
 sudo apt install apt-transport-https curl
