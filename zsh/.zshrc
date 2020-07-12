@@ -193,7 +193,7 @@ export JAVA_HOME=/home/bayle/Documents/android-studio/jre/
 export PATH=$PATH:/home/bayle/Documents/onefetch_linux_x86-64
 export PATH=$PATH:/home/bayle/Documents/android-studio/jre/bin/
 export PATH=$PATH:$HOME/flutter/.pub-cache/bin
-alias flutter_codecov="flutter test -j 4 --coverage && genhtml coverage/lcov.info --output=coverage"
+alias flutter_codecov="flutter test -j 16 --coverage && genhtml coverage/lcov.info --output=coverage"
 export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:/usr/lib/dart/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -204,6 +204,11 @@ export PATH="$PATH:/home/bayle/.cargo/bin"
 alias localize="flutter pub run json_intl -d lib/generated/localization.dart"
 alias extract_pubspec="flutter pub run pubspec_extract -d lib/generated/pubspec.dart"
 alias venv_start="source ./venv/bin/activate"
-alias docker_attach="docker exec -it $(docker ps | awk 'NR > 1 {print $1; exit}') bash"
+alias docker_attach="docker exec -ti backend_web_1 bash"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+init_vimrc() {
+sudo apt install git curl python3-pip exuberant-ctags ack-grep
+sudo pip3 install pynvim flake8 pylint isort
+}
