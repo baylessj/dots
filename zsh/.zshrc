@@ -212,3 +212,10 @@ init_vimrc() {
 sudo apt install git curl python3-pip exuberant-ctags ack-grep
 sudo pip3 install pynvim flake8 pylint isort
 }
+alias obliterate_npm="rm -rf node_modules && npm cache clean --force"
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PATH="$PATH:$HOME/.poetry/bin"
+source <(plz --completion_script)
