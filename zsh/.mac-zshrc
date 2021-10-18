@@ -109,17 +109,22 @@ alias 'git merge'='git merge --no-ff'
 
 alias lsh="ls -ld .?*"
 
-alias venv_start="source ./venv/bin/activate"
+alias venv_start="source ./.venv/bin/activate"
 
 alias obliterate_npm="rm -rf node_modules && npm cache clean --force"
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 
 eval "$(pyenv init -)"
-export PYTHONPATH=.:${PYTHONPATH}:~/Documents/git
+export PYTHONPATH=.:${PYTHONPATH}:/Users/computer3303/Documents/git/covid19lab
 export PATH=/usr/local/opt/postgresql@12/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+alias export_env="export $(egrep -v '^#' .env | xargs);"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
+alias start_conda="source /usr/local/anaconda3/bin/activate"
