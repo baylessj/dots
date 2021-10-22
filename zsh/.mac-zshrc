@@ -128,3 +128,4 @@ export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 alias start_conda="source /usr/local/anaconda3/bin/activate"
+alias psql_dev="docker exec -it infrastructure_db_1 psql -d covid19lab -U covid"
