@@ -96,56 +96,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
-export PATH="$HOME/sp-cli/:$PATH"
 
-prompt_zsh_showStatus () {
-  local color='238'
-  state=`exec sp current`;
-  if [ $state = "Error: Spotify is not running." ]; then
-	echo -n "%F{grey27}test";
-  else
-    artist=`sp current | grep "^Artist" | cut -d ' ' -f 8-`;
-    track=`sp current | grep "^Title" | cut -d ' ' -f 9-`;
-
-      echo -n "%F{red}\uf230   %F{red}$artist - $track " ;
-
-  fi
-}
-POWERLEVEL9K_MODE='nerdfont-fontconfig'
-POWERLEVEL9K_CUSTOM_NOW_PLAYING='~/.nowplaying'
-POWERLEVEL9K_CUSTOM_NOW_PLAYING_BACKGROUND='064'
-POWERLEVEL9K_CUSTOM_NOW_PLAYING_FOREGROUND='000'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ram)
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='000'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='064'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='000'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='064'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='000'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='064'
-POWERLEVEL9K_RAM_BACKGROUND='238'
-POWERLEVEL9K_RAM_FOREGROUND='203'
-POWERLEVEL9K_OS_ICON_FOREGROUND='203'
-POWERLEVEL9K_OS_ICON_BACKGROUND='238'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='064'
-
-alias prosu="sudo chmod a+rw /dev/ttyACM0"
-export PATH="$PATH:~/arcanist/bin"
 export PATH="$PATH:/home/bayle/.local/bin"
-alias cd_vex="cd /mnt/c/Users/Jonathan/vexRepos"
-alias undo_arc="git reset --hard origin/HEAD"
-build_okapi() {
-	mkdir cmake-build-debug
-	cd cmake-build-debug
-	cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" ..
-	cmake --build . --target OkapiLibV5 -- -j 2
-}
-export EDITOR=vim
 alias s="git status"
-alias docs_dep="make && echo "copying" && cp -a ./build/* ../pros-website/"
-# Install Ruby Gems to ~/gems
-export GEM_HOME=$HOME/gems
-export PATH=$HOME/gems/bin:$PATH
 
 init_docs() {
         sudo apt-get install ruby-full
@@ -163,59 +116,12 @@ init_docs() {
 alias cdg="cd ~/Documents/git/"
 alias b="git branch"
 alias 'git merge'='git merge --no-ff'
-[[ -s /home/bayle/.autojump/etc/profile.d/autojump.sh ]] && source /home/bayle/.autojump/etc/profile.d/autojump.sh
 
 autoload -U compinit && compinit -u
-alias faps_hot='arm-none-eabi-addr2line -e ./bin/hot.package.elf -faps'
-alias faps_cold='arm-none-eabi-addr2line -e ./bin/cold.package.elf -faps'
-#exec stty -ixon # prevent ctrl+S from locking keyboard
-alias transparent="xprop -id 0x2400001 -format _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY 0xFFFFFFFF"
-jack_start() {
-	pulseaudio --kill
-	jack_control  start
-}
-jack_stop() {
-	jack_control exit
-	pulseaudio --start
-}
-export PATH="$PATH:/home/bayle/flutter/bin"
-export PATH="$PATH:/home/bayle/Documents/android-studio-ide-183.5522156-linux/android-studio/jre/jre/bin"
 alias lsh="ls -ld .?*"
-alias flutter-keygen="keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 9999 -alias autodo"
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-export PATH=$PATH:/home/bayle/gcc-arm-none-eabi-8-2019-q3-update/bin/
-export JAVA_HOME=/home/bayle/Documents/android-studio/jre/
-
-# added by travis gem
-[ -f /home/bayle/.travis/travis.sh ] && source /home/bayle/.travis/travis.sh
-export PATH=$PATH:/home/bayle/Documents/onefetch_linux_x86-64
-export PATH=$PATH:/home/bayle/Documents/android-studio/jre/bin/
-export PATH=$PATH:$HOME/flutter/.pub-cache/bin
-alias flutter_codecov="flutter test -j 16 --coverage && genhtml coverage/lcov.info --output=coverage"
-export PATH=~/.npm-global/bin:$PATH
-export PATH="$PATH:/usr/lib/dart/bin"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
-alias flutter_drive="flutter drive --target=test_driver/app.dart"
-
-export PATH="$PATH:/home/bayle/.cargo/bin"
-
-alias localize="flutter pub run json_intl -d lib/generated/localization.dart"
-alias extract_pubspec="flutter pub run pubspec_extract -d lib/generated/pubspec.dart"
 alias venv_start="source ./venv/bin/activate"
-alias docker_attach="docker exec -ti backend_web_1 bash"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-init_vimrc() {
-sudo apt install git curl python3-pip exuberant-ctags ack-grep
-sudo pip3 install pynvim flake8 pylint isort
-}
 alias obliterate_npm="rm -rf node_modules && npm cache clean --force"
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export PATH="$PATH:$HOME/.poetry/bin"
-source <(plz --completion_script)
