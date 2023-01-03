@@ -1,0 +1,5 @@
+# Runs daily backup at 1.AM
+0 1 * * * source /etc/restic-env && restic -r b2:bayle-projects backup --verbose /media/bayle/TOSHIBA\ EXT/projects
+
+# Runs every 2.AM, and always keeps the last 2 backup snapshots
+0 2 * * * source /etc/restic-env && restic -r b2:bayle-projects forget --keep-last 2 --prune
